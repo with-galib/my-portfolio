@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "phino",
+    "title": "Phino",
+    "summary": "A Flutter app that shares files between nearby Android phones over Wi-Fi, with no internet connection needed.",
+    "tags": ["Flutter", "Android", "Local networking"],
+    "filters": ["mobile", "network"],
+    "details": ["Discovers devices on the same local network", "Sends files directly between phones", "Built as an open source project"],
+    "link": "https://github.com/with-galib/Phino"
+  },
+  {
+    "slug": "telephony-simulation",
+    "title": "Telephony simulation platform",
+    "summary": "An event-driven simulator for learning how distributed systems behave, modeled on how phone networks route and connect calls.",
+    "tags": ["Event-driven", "Distributed systems", "Simulation"],
+    "filters": ["systems"],
+    "details": ["Models calls as events moving between services", "Lets you test failures and retries safely", "Designed as a hands-on learning tool"],
+    "link": ""
+  }
+]

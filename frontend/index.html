@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Galib · Principal Software Architect</title>
+<meta name="description" content="Galib is a principal software architect and senior backend engineer focused on distributed systems and microservices.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/theme.js"></script>
+</head>
+<body>
+<header><div class="wrap">
+<a class="logo" href="index.html" aria-label="Galib, home">G<span>alib</span></a>
+<nav aria-label="Main"><a href="work.html">Work</a><a href="skills.html">Skills</a><a href="about.html">About</a><a href="contact.html">Contact</a><button id="theme" aria-label="Switch light or dark theme">◐</button></nav>
+</div></header>
+<main>
+<div class="wrap">
+<div class="hero">
+<div>
+<h1>I design systems that keep running when parts fail.</h1>
+<p class="lead">I’m Galib, a principal software architect and senior backend engineer working on distributed systems and microservices. I build across the stack, from mobile apps to network-level tools.</p>
+<div class="btns"><a class="btn p" href="work.html">See my work</a><a class="btn" href="contact.html">Get in touch</a></div>
+</div>
+<div class="sim">
+<span class="hint">Tap a node to take it down</span>
+<canvas id="cv" role="img" aria-label="Interactive network of nodes. Tap a node to simulate a failure and watch requests reroute."></canvas>
+<div class="hud"><span>Requests served <b id="served">0</b></span><span>Dropped <b id="dropped">0</b></span><span>Nodes down <b id="down">0</b></span></div>
+</div>
+</div>
+<div class="tiles">
+<a class="tile" href="work.html"><h3>Work →</h3><p>Projects I’ve built and shipped.</p></a>
+<a class="tile" href="skills.html"><h3>Skills →</h3><p>What I work with day to day.</p></a>
+<a class="tile" href="about.html"><h3>About →</h3><p>Who I am and how I think.</p></a>
+<a class="tile" href="contact.html"><h3>Contact →</h3><p>Send me a message.</p></a>
+</div>
+</div>
+</main>
+<footer><div class="wrap">© <span id="yr">2026</span> Galib</div></footer>
+<script src="js/main.js"></script><script src="js/hero.js"></script>
+</body>
+</html>

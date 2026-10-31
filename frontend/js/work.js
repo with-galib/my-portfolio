@@ -1,0 +1,14 @@
+(function(){
+var $=function(s){return document.querySelector(s)},$$=function(s){return [].slice.call(document.querySelectorAll(s))};
+var API=((window.PORTFOLIO_CONFIG&&window.PORTFOLIO_CONFIG.API_BASE)||'').replace(/\/$/,''),filter='all';
+var FALLBACK=[{slug:'phino',title:'Phino',summary:'A Flutter app that shares files between nearby Android phones over Wi-Fi, with no internet connection needed.',tags:['Flutter','Android','Local networking'],filters:['mobile','network'],details:['Discovers devices on the same local network','Sends files directly between phones','Built as an open source project'],link:'https://github.com/with-galib/Phino'},
+{slug:'telephony-simulation',title:'Telephony simulation platform',summary:'An event-driven simulator for learning how distributed systems behave, modeled on how phone networks route and connect calls.',tags:['Event-driven','Distributed systems','Simulation'],filters:['systems'],details:['Models calls as events moving between services','Lets you test failures and retries safely','Designed as a hands-on learning tool'],link:''}];
+function esc(x){return String(x).replace(/[&<>"']/g,function(c){return '&#'+c.charCodeAt(0)+';'})}
+function apply(){$$('.card').forEach(function(k){k.hidden=!(filter==='all'||k.dataset.t.split(' ').indexOf(filter)>-1)})}
+function render(list){$('#grid').innerHTML=list.map(function(p,i){var id='m'+i;return '<article class="card" data-t="'+esc((p.filters||[]).join(' '))+'"><h3>'+esc(p.title)+'</h3><p>'+esc(p.summary)+'</p><div class="tags">'+(p.tags||[]).map(function(t){return '<span>'+esc(t)+'</span>'}).join('')+'</div><div class="more" id="'+id+'"><ul>'+(p.details||[]).map(function(d){return '<li>'+esc(d)+'</li>'}).join('')+'</ul></div><button class="toggle" aria-expanded="false" aria-controls="'+id+'">Show details</button>'+(/^https:\/\//.test(p.link||'')?'<div class="row"><a href="'+esc(p.link)+'" target="_blank" rel="noopener">View on GitHub</a></div>':'')+'</article>'}).join('');apply()}
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.toggle');if(b){var m=document.getElementById(b.getAttribute('aria-controls')),o=b.getAttribute('aria-expanded')==='true';m.style.maxHeight=o?0:m.scrollHeight+'px';b.setAttribute('aria-expanded',!o);b.textContent=o?'Show details':'Hide details';return}
+var c=e.target.closest&&e.target.closest('.chip');if(c){filter=c.dataset.f;$$('.chip').forEach(function(x){x.setAttribute('aria-pressed',x===c)});apply()}});
+function getJSON(u,ms){var c=new AbortController(),t=setTimeout(function(){c.abort()},ms);return fetch(u,{signal:c.signal}).then(function(r){if(!r.ok)throw new Error('bad status');return r.json()}).finally(function(){clearTimeout(t)})}
+render(FALLBACK);
+getJSON(API+'/api/projects',4000).then(function(d){if(d&&d.projects&&d.projects.length)render(d.projects)}).catch(function(){});
+})();

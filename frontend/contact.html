@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact · Galib</title>
+<meta name="description" content="Contact Galib about system design or backend projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/theme.js"></script>
+</head>
+<body>
+<header><div class="wrap">
+<a class="logo" href="index.html" aria-label="Galib, home">G<span>alib</span></a>
+<nav aria-label="Main"><a href="work.html">Work</a><a href="skills.html">Skills</a><a href="about.html">About</a><a href="contact.html" aria-current="page">Contact</a><button id="theme" aria-label="Switch light or dark theme">◐</button></nav>
+</div></header>
+<main>
+<div class="wrap page">
+<h1 class="ph">Let’s talk</h1>
+<p class="sub">Have a system to design or a project to build? Reach out.</p>
+<form id="cf" class="form" novalidate>
+<label>Name<input name="name" required maxlength="100" autocomplete="name"></label>
+<label>Email<input name="email" type="email" required maxlength="200" autocomplete="email"></label>
+<label>Message<textarea name="message" required minlength="10" maxlength="2000" rows="5"></textarea></label>
+<input name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="btns"><button class="btn p" type="submit">Send message</button><a class="btn" href="https://github.com/with-galib" target="_blank" rel="noopener">Visit my GitHub</a><button class="btn" type="button" id="share">Copy page link</button></div>
+<p id="cs" role="status" class="status"></p>
+</form>
+</div>
+</main>
+<footer><div class="wrap">© <span id="yr">2026</span> Galib</div></footer>
+<script src="js/main.js"></script><script src="config.js"></script><script src="js/contact.js"></script>
+</body>
+</html>

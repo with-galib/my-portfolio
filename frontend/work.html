@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Work · Galib</title>
+<meta name="description" content="Projects by Galib: Phino and a telephony simulation platform.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/theme.js"></script>
+</head>
+<body>
+<header><div class="wrap">
+<a class="logo" href="index.html" aria-label="Galib, home">G<span>alib</span></a>
+<nav aria-label="Main"><a href="work.html" aria-current="page">Work</a><a href="skills.html">Skills</a><a href="about.html">About</a><a href="contact.html">Contact</a><button id="theme" aria-label="Switch light or dark theme">◐</button></nav>
+</div></header>
+<main>
+<div class="wrap page">
+<h1 class="ph">Selected work</h1>
+<p class="sub">Filter by area, then open a project for details.</p>
+<div class="chips" role="group" aria-label="Filter projects">
+<button class="chip" aria-pressed="true" data-f="all">All</button>
+<button class="chip" aria-pressed="false" data-f="mobile">Mobile</button>
+<button class="chip" aria-pressed="false" data-f="systems">Distributed systems</button>
+<button class="chip" aria-pressed="false" data-f="network">Networking</button>
+</div>
+<div class="grid" id="grid" aria-live="polite"></div>
+</div>
+</main>
+<footer><div class="wrap">© <span id="yr">2026</span> Galib</div></footer>
+<script src="js/main.js"></script><script src="config.js"></script><script src="js/work.js"></script>
+</body>
+</html>
