@@ -1,4 +1,4 @@
-# Galib's portfolio
+# My Portfolio
 
 An interactive, responsive portfolio with a small Node.js backend.
 
