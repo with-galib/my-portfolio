@@ -37,7 +37,7 @@ git branch -M main
 git remote add origin https://github.com/with-galib/portfolio.git
 git push -u origin main
 ```
-
+//
 ## Deploy
 
 **Option A: everything on one server (simplest).** Build the Docker image from the repo root (`docker build -f backend/Dockerfile -t portfolio .`) and run it on Render, Railway, Fly.io or any VPS. Set `ADMIN_TOKEN` and `TRUST_PROXY=1`. Mount a persistent disk at `backend/data` so messages survive restarts.
